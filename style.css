@@ -1,0 +1,349 @@
+.body {
+  font-family: 'Inter', sans-serif;
+  /*margin: 0;*/
+}
+
+.body {
+  transition: opacity 0.3s ease;
+}
+
+.body.fade-out {
+  opacity: 0;
+}
+
+
+.icontitl{
+    width: 120px;
+  height: 120px;
+}
+
+
+
+
+/* Hero Section */
+
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 75vh;
+  padding: 4rem 1rem;
+  /*background: linear-gradient(to right, rgba(255, 255, 255, 0), #ffe1c5);*/
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.hero .container,
+.hero .container2 {
+  position: relative;
+  z-index: 1;
+  color: #242424;
+}
+
+.hero .container {
+  text-align: right;
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+.hero-animated {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  background-color: white;
+}
+
+.hero-animated.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Minuman Section */
+
+
+
+.hot-box {
+  background-image: url('./asset/1.png');
+}
+.greentea-box {
+  background-image: url('./asset/1.png');
+}
+.belgian-box {
+  background-image: url('./asset/');
+}
+.coffee-cream-box {
+    background-image: url('./asset/');
+}
+
+
+.minuman-animated {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  background-color: white;
+}
+
+.minuman-animated.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.belgian-box h3,
+.hot-box h3 {
+  font-size: 1.8rem;
+}
+
+.belgian-box p,
+.hot-box p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Semua box minuman */
+.hot-box, .belgian-box, .greentea-box, .coffee-cream-box {
+  min-height: 500px;
+  padding: 2.3rem 1rem;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin: 5px; /* Margin atas-bawah & kanan-kiri default */
+}
+
+.belgian-box{
+  color: #fff;
+}
+
+.belgian-box .btn {
+  color: white;
+  border-color: white;
+}
+
+.belgian-box .btn:hover {
+  background-color: rgba(255, 255, 255, 0.4); /* putih transparan 40% */
+  color: black;
+  backdrop-filter: blur(8px); /* efek blur latar belakang */
+  -webkit-backdrop-filter: blur(8px); /* untuk Safari */
+  border-color: rgba(255, 255, 255, 0.4);
+}
+  /* Animasi muncul dari bawah */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease-out forwards;
+  }
+
+  @keyframes fadeUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* Saat mobile dan tablet: hapus hanya margin kiri-kanan */
+@media (max-width: 991.98px) {
+    
+  .hot-box,
+  .belgian-box,
+  .greentea-box,
+  .coffee-cream-box {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    /* Margin atas dan bawah tetap dipertahankan */
+  }
+.hero .container,
+  .hero .container2 {
+    max-width: 100%;
+    width: 100%;
+    padding: 2rem 1rem; /* Sama seperti .minuman-box */
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero {
+    padding: 2rem 0; /* Atas bawah tetap ada ruang */
+  }
+
+      .logo-img {
+        width: 40px;
+        height: 40px;
+      }
+}
+
+
+
+/* Saat mobile dan tablet: hapus hanya margin kiri-kanan */
+@media (max-width: 991.98px) {
+  .hot-box,
+  .belgian-box,
+  .greentea-box,
+  .coffee-cream-box {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    /* Margin atas dan bawah tetap dipertahankan */
+  }
+  
+.container2{
+    max-width: 100%;
+    width: 100%;
+    padding: 2rem 1rem; /* Sama seperti .minuman-box */
+    margin: 0 auto;
+    text-align: left;
+     align-items: left;
+    justify-content: left;
+}
+.container {
+    max-width: 100%;
+    width: 100%;
+    padding: 2rem 1rem; /* Sama seperti .minuman-box */
+    margin: 0 auto;
+    text-align: center;
+     align-items: center;
+    justify-content: center;
+  }
+  
+    .hero {
+    padding: 2rem 0; /* Atas bawah tetap ada ruang */
+  }
+
+
+.logo-img {
+        width: 1000px;
+        height: 90px;
+      }
+}
+@media (max-width: 576px) {
+.container{
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    
+  }
+  
+}
+
+
+.container2 {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+    
+  }
+  
+
+#navbar-spacer {
+  height: 0; /* default, nanti diisi via JS */
+}
+
+
+/* FAQ styles */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+#faq-section {
+  background: transparent;
+}
+
+#faq-section h2 {
+  font-family: 'Patrick Hand', 'Inter', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* tombol pertanyaan bergaya "list" */
+.faq-question {
+  background: transparent;
+  border: 0;
+  padding: 0.35rem 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #111;
+  text-transform: none;
+  font-family: 'Patrick Hand', 'Inter', sans-serif;
+  box-shadow: none;
+}
+
+/* menambahkan bullet warna hijau seperti gambar */
+.faq-question::before {
+  content: "•";
+  color: #198754; /* hijau bootstrap */
+  display: inline-block;
+  width: 1.2rem;
+  margin-right: 0.4rem;
+  font-size: 1.25rem;
+  vertical-align: middle;
+}
+
+/* jawaban collapsed */
+.faq-answer p {
+  margin: 0;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Hapus garis fokus default untuk tampilan yang bersih (tetap pertahankan aksesibilitas) */
+.faq-question:focus {
+  outline: 2px solid rgba(25, 135, 84, 0.25);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.text-008081 {
+  color: #008081 !important; }
+
+  .p-6 {
+  padding: 5rem !important;
+}
+
+
+  .unique-circle {
+    /* Metode 1: Menggunakan Aspect Ratio Box */
+    width: 100%; /* Agar mengambil seluruh lebar kolom */
+    padding-top: 100%; /* Ini yang menciptakan rasio 1:1 (bulat sempurna) */
+    position: relative; 
+    border-radius: 50%;
+    /* Styling Visual */
+    border: 3px solid white; /* Contoh border */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+  }
+
+  /* Memastikan konten (gambar) mengisi wadah 1:1 */
+  .unique-circle img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Penting: bulatkan gambar agar tidak keluar dari wadah */
+  }
+
+  .bg-teal { 
+    background-color: #00796b; 
+  }

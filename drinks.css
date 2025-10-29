@@ -1,0 +1,56 @@
+
+.menu-section {
+  text-align: center;
+}
+
+.menu-section h2 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.size-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-weight: bold;
+   margin-bottom: 1rem; 
+}
+
+
+
+.menu-item {
+  max-width: 180px;
+  text-align: center;
+  position: relative;
+}
+
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.menu-item h3 {
+  font-size: 1.1rem;
+  margin: 0.5rem 0 0.3rem;
+}
+
+.menu-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+
+.hero-animated {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+  background-color: white;
+}
+
+.hero-animated.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
